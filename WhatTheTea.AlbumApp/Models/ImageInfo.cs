@@ -23,29 +23,6 @@ namespace WhatTheTea.AlbumApp.Models
 
         public string ImageDimensions => $"{Properties.Width} x {Properties.Height}";
 
-        public async Task<BitmapImage> GetImageAsync()
-        {
-            using IRandomAccessStream fileStream = await ImageFile.OpenReadAsync();
-
-            // Create a bitmap to be the image source.
-            BitmapImage bitmapImage = new();
-            bitmapImage.SetSource(fileStream);
-
-            return bitmapImage;
-        }
-
-        public async Task<BitmapImage> GetPreviewAsync() 
-        {
-            using StorageItemThumbnail thumbnail =
-                await ImageFile.GetThumbnailAsync(ThumbnailMode.PicturesView);
-
-            // Create a bitmap to be the image source.
-            var bitmapImage = new BitmapImage();
-            bitmapImage.SetSource(thumbnail);
-
-            return bitmapImage;
-        }
-
         public string ImageTitle
         {
             get => string.IsNullOrEmpty(Properties.Title) ? ImageName : Properties.Title;
@@ -75,6 +52,44 @@ namespace WhatTheTea.AlbumApp.Models
                 }
             }
         }
+
+        public ImageInfo(ImageProperties properties,
+            StorageFile imageFile,
+            string name,
+            string type)
+        {
+            Properties = properties;
+            ImageName = name;
+            ImageFileType = type;
+            ImageFile = imageFile;
+            var rating = (int)properties.Rating;
+            var random = new Random();
+            ImageRating = rating == 0 ? random.Next(1, 5) : rating;
+        }
+
+        public async Task<BitmapImage> GetImageAsync()
+        {
+            using IRandomAccessStream fileStream = await ImageFile.OpenReadAsync();
+
+            // Create a bitmap to be the image source.
+            BitmapImage bitmapImage = new();
+            bitmapImage.SetSource(fileStream);
+
+            return bitmapImage;
+        }
+
+        public async Task<BitmapImage> GetPreviewAsync()
+        {
+            using StorageItemThumbnail thumbnail =
+                await ImageFile.GetThumbnailAsync(ThumbnailMode.PicturesView);
+
+            // Create a bitmap to be the image source.
+            BitmapImage bitmapImage = new();
+            bitmapImage.SetSource(thumbnail);
+
+            return bitmapImage;
+        }
+
 
     }
 }
