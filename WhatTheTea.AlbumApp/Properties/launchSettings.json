@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "PlaygroundWinUI (Package)": {
+    "WhatTheTea.AlbumApp (Package)": {
       "commandName": "MsixPackage"
     },
-    "PlaygroundWinUI (Unpackaged)": {
+    "WhatTheTea.AlbumApp (Unpackaged)": {
       "commandName": "Project"
     }
   }
