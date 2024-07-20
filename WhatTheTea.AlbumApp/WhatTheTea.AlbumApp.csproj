@@ -12,6 +12,12 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Assets\Samples\bliss-600dpi.png" />
+    <Content Remove="Assets\Samples\image;s=2400x1405.webp" />
+    <Content Remove="Assets\Samples\NewWallpaper.png" />
+    <Content Remove="Assets\Samples\windows-xp-bliss-4k-lu-1920x1080.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
