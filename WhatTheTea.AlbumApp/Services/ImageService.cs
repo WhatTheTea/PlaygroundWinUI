@@ -13,8 +13,7 @@ namespace WhatTheTea.AlbumApp.Services
     {
         public async static IAsyncEnumerable<ImageInfo> GetImagesAsync()
         {
-            StorageFolder appInstalledFolder = Package.Current.InstalledLocation; 
-            StorageFolder picturesFolder = await appInstalledFolder.GetFolderAsync("Assets\\Samples");
+            StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 
             IReadOnlyList<StorageFile> imageFiles = await picturesFolder.GetFilesAsync();
             foreach (StorageFile file in imageFiles)
