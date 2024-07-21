@@ -6,11 +6,50 @@
     xmlns:local="using:WhatTheTea.AlbumApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:WhatTheTea.AlbumApp.ViewModels" xmlns:models="using:WhatTheTea.AlbumApp.Models"
     mc:Ignorable="d">
 
     <Grid>
-        <GridView x:Name="ImageGridView">
-            
+        <Grid.Resources>
+            <DataTemplate x:Key="ImageGridView_ItemTemplate"
+                          x:DataType="models:ImageInfo">
+                <Grid Height="250"
+                      Width="250"
+                      Margin="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <Image x:Name="ItemImage"
+                           Source="{x:Bind ImageFile.Path}"
+                           Stretch="Uniform" />
+
+                    <StackPanel Orientation="Vertical"
+                                Grid.Row="1">
+                        <TextBlock Text="{x:Bind ImageTitle}"
+                                   HorizontalAlignment="Center"
+                                   Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <StackPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center">
+                            <TextBlock Text="{x:Bind ImageFileType}"
+                                       HorizontalAlignment="Center"
+                                       Style="{StaticResource CaptionTextBlockStyle}" />
+                            <TextBlock Text="{x:Bind ImageDimensions}"
+                                       HorizontalAlignment="Center"
+                                       Style="{StaticResource CaptionTextBlockStyle}"
+                                       Margin="8,0,0,0" />
+                        </StackPanel>
+
+                        <RatingControl Value="{x:Bind ImageRating}" IsReadOnly="True"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        
+        <GridView x:Name="ImageGridView"
+                  ItemTemplate="{StaticResource ImageGridView_ItemTemplate}"
+                  ItemsSource="{x:Bind ViewModel.Images, Mode=OneWay}">
         </GridView>
     </Grid>
 </Window>

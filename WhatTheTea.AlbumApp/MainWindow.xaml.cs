@@ -12,6 +12,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 
+using WhatTheTea.AlbumApp.ViewModels;
+
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -25,9 +27,12 @@ namespace WhatTheTea.AlbumApp
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public MainViewModel ViewModel { get; }
         public MainWindow()
         {
             this.InitializeComponent();
+
+            ViewModel = new MainViewModel();
         }
     }
 }
