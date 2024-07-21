@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 
 using WhatTheTea.AlbumApp.Models;
 using WhatTheTea.AlbumApp.Services;
@@ -13,10 +12,18 @@ namespace WhatTheTea.AlbumApp.ViewModels
 
         public MainViewModel()
         {
-            Task.Run(() => ImageService.GetImagesAsync()
-                                             .ToBlockingEnumerable()
-                                             .ToList()
-                                             .ForEach(x => Images.Add(x)));
+            var uiContext = SynchronizationContext.Current;
+
+            uiContext.Post(async (object state) =>
+            {
+                if (state is ObservableCollection<ImageInfo> images)
+                {
+                    await foreach (var image in ImageService.GetImagesAsync())
+                    {
+                        images.Add(image);
+                    }
+                }
+            }, this.Images);
         }
     }
 }
