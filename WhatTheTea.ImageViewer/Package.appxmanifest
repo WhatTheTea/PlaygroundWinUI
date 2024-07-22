@@ -8,14 +8,14 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="8793cd62-394f-4e31-9f8a-e8bafadbefd6"
+    Name="8af73e34-0542-4c49-b3df-bd730d003fd5"
     Publisher="CN=WhatTheTea"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="8793cd62-394f-4e31-9f8a-e8bafadbefd6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="8af73e34-0542-4c49-b3df-bd730d003fd5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>WhatTheTea.PhotoViewer</DisplayName>
+    <DisplayName>WhatTheTea.ImageViewer</DisplayName>
     <PublisherDisplayName>WhatTheTea</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -34,14 +34,25 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="WhatTheTea.PhotoViewer"
-        Description="WhatTheTea.PhotoViewer"
+        DisplayName="WhatTheTea.ImageViewer"
+        Description="WhatTheTea.ImageViewer"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="whatthetea.imageviewer">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.jpg</uap:FileType>
+              <uap:FileType>.png</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DisplayName>Open with WTT.ImageViewer</uap:DisplayName>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
 

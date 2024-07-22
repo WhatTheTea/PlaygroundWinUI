@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "WhatTheTea.PhotoViewer (Package)": {
+    "WhatTheTea.ImageViewer (Package)": {
       "commandName": "MsixPackage"
     },
-    "WhatTheTea.PhotoViewer (Unpackaged)": {
+    "WhatTheTea.ImageViewer (Unpackaged)": {
       "commandName": "Project"
     }
   }
