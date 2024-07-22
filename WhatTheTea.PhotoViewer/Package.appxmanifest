@@ -8,14 +8,14 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="1d23001c-6d59-46f9-8c5c-2eee632ad876"
+    Name="8793cd62-394f-4e31-9f8a-e8bafadbefd6"
     Publisher="CN=WhatTheTea"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="1d23001c-6d59-46f9-8c5c-2eee632ad876" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="8793cd62-394f-4e31-9f8a-e8bafadbefd6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>WhatTheTea.AlbumApp</DisplayName>
+    <DisplayName>WhatTheTea.PhotoViewer</DisplayName>
     <PublisherDisplayName>WhatTheTea</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -34,8 +34,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="AlbumApp"
-        Description="WhatTheTea.AlbumApp"
+        DisplayName="WhatTheTea.PhotoViewer"
+        Description="WhatTheTea.PhotoViewer"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
