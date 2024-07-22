@@ -14,8 +14,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
+using System.Reactive.Windows.Foundation;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
+using System.Threading.Tasks;
 
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -35,9 +40,15 @@ namespace WhatTheTea.PhotoMaker
         public MainWindow()
         {
             this.InitializeComponent();
+            // TODO: Replace camera preview with mediacapture
             CameraPreviewControl.PreviewFailed += CameraPreviewControl_PreviewFailed;
-            CameraPreviewControl.StartAsync();
-            CameraPreviewControl.CameraHelper.FrameArrived += CameraPreviewControl_FrameArrived;
+            CameraPreviewControl.StartAsync()
+                .ToObservable()
+                .Subscribe(_ => Observable.FromEventPattern<FrameEventArgs>(CameraPreviewControl.CameraHelper, nameof(CameraHelper.FrameArrived))
+                                          .Sample(TimeSpan.FromMilliseconds(50))
+                                          .ObserveOn(uiContext)
+                                          .Subscribe(x => CameraPreviewControl_FrameArrived(x.Sender, x.EventArgs)));
+
         }
 
         private static SoftwareBitmap TransformBitmap(SoftwareBitmap softwareBitmap)
@@ -52,12 +63,13 @@ namespace WhatTheTea.PhotoMaker
         private void CameraPreviewControl_FrameArrived(object sender, FrameEventArgs e)
         {
             var videoFrame = e.VideoFrame;
-            var softwareBitmap = TransformBitmap( videoFrame.SoftwareBitmap);
-            uiContext.Post(async state =>
-            {
-                await ImageSource.SetBitmapAsync(softwareBitmap);
+            var softwareBitmap = TransformBitmap(videoFrame.SoftwareBitmap);
 
-            }, null);
+            ImageSource.SetBitmapAsync(softwareBitmap)
+                    .ToObservable()
+                    .Timeout(TimeSpan.FromMilliseconds(50))
+                    .ObserveOn(uiContext)
+                    .Subscribe();
         }
 
         private void CameraPreviewControl_PreviewFailed(object sender, PreviewFailedEventArgs e)
