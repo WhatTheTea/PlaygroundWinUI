@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WhatTheTea.PhotoMaker (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WhatTheTea.PhotoMaker (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
