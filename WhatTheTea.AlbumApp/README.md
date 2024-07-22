@@ -1,5 +1,5 @@
 # Basic WinUI 3 App
-## Tech used:
+### Topics:
 - MVVM (CommunityToolkit)
 - Data bindings
 - WinRT Storage API
