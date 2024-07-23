@@ -48,6 +48,10 @@ namespace WhatTheTea.PhotoMaker
                                           .Sample(TimeSpan.FromMilliseconds(50))
                                           .ObserveOn(uiContext)
                                           .Subscribe(x => CameraPreviewControl_FrameArrived(x.Sender, x.EventArgs)));
+            // WTF?!
+            // Without GC camera freezes .-.
+            Observable.Interval(TimeSpan.FromMilliseconds(700))
+                .Subscribe(x => GC.Collect());
 
         }
 
