@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WhatTheTea.MarketApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WhatTheTea.MarketApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

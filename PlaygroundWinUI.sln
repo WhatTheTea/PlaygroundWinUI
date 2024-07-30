@@ -10,9 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheTea.ImageViewer", "WhatTheTea.ImageViewer\WhatTheTea.ImageViewer.csproj", "{3C23EE6D-886D-4A51-AE1F-1BEFFC5252BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheTea.ImageViewer", "WhatTheTea.ImageViewer\WhatTheTea.ImageViewer.csproj", "{3C23EE6D-886D-4A51-AE1F-1BEFFC5252BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheTea.PhotoMaker", "WhatTheTea.PhotoMaker\WhatTheTea.PhotoMaker.csproj", "{DA56C488-6F0C-4677-957F-3CA766D52967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheTea.PhotoMaker", "WhatTheTea.PhotoMaker\WhatTheTea.PhotoMaker.csproj", "{DA56C488-6F0C-4677-957F-3CA766D52967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheTea.MarketApp", "WhatTheTea.MarketApp\WhatTheTea.MarketApp.csproj", "{76464931-D473-4F48-BF0E-A44773E89AED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,24 @@ Global
 		{DA56C488-6F0C-4677-957F-3CA766D52967}.Release|x86.ActiveCfg = Release|x86
 		{DA56C488-6F0C-4677-957F-3CA766D52967}.Release|x86.Build.0 = Release|x86
 		{DA56C488-6F0C-4677-957F-3CA766D52967}.Release|x86.Deploy.0 = Release|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|ARM64.Build.0 = Debug|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x64.ActiveCfg = Debug|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x64.Build.0 = Debug|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x64.Deploy.0 = Debug|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x86.ActiveCfg = Debug|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x86.Build.0 = Debug|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Debug|x86.Deploy.0 = Debug|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|ARM64.ActiveCfg = Release|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|ARM64.Build.0 = Release|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|ARM64.Deploy.0 = Release|ARM64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x64.ActiveCfg = Release|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x64.Build.0 = Release|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x64.Deploy.0 = Release|x64
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.ActiveCfg = Release|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.Build.0 = Release|x86
+		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
