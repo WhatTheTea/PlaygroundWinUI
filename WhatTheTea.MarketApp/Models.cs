@@ -1,5 +1,20 @@
-﻿namespace WhatTheTea.MarketApp.Models
+﻿using System.Collections.Generic;
+
+namespace WhatTheTea.MarketApp.Models
 {
-    public record Product(int Id, string Title, string Description, double Price);
-    public record Seller(int Id, string Title, string Description, double Rating, Product[] Products);
+    public class Product
+    {
+        public required int Id { get; set; }
+        public required string Title { get; set; }
+        public required string Description { get; set; }
+        public required double Price { get; set; }
+    }
+    public class Seller
+    {
+        public required int Id { get; set; }
+        public required string Title { get; set; }
+        public required string Description { get; set; }
+        public required double Rating { get; set; }
+        public required IEnumerable<Product> Products { get; set; }
+    }
 }
