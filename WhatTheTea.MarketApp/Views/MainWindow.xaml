@@ -8,9 +8,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:tk="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
-    <Grid>
-        <tk:DataGrid>
+    <StackPanel>
+        <tk:DataGrid ItemsSource="{x:Bind ViewModel.Products}">
 
         </tk:DataGrid>
-    </Grid>
+        <Button Content="Add" Command="{x:Bind ViewModel.AddProductCommand}"/>
+        <Button Content="Drop" Command="{x:Bind ViewModel.DropDatabaseLolCommand}"/>
+    </StackPanel>
 </Window>
