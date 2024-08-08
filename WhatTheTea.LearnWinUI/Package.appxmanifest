@@ -34,7 +34,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="WhatTheTea.LearnWinUI"
+        DisplayName="LearnWinUI"
         Description="WhatTheTea.LearnWinUI"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
