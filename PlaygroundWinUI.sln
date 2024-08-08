@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheTea.ImageViewer", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheTea.PhotoMaker", "WhatTheTea.PhotoMaker\WhatTheTea.PhotoMaker.csproj", "{DA56C488-6F0C-4677-957F-3CA766D52967}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheTea.MarketApp", "WhatTheTea.MarketApp\WhatTheTea.MarketApp.csproj", "{76464931-D473-4F48-BF0E-A44773E89AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheTea.MarketApp", "WhatTheTea.MarketApp\WhatTheTea.MarketApp.csproj", "{76464931-D473-4F48-BF0E-A44773E89AED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheTea.LearnWinUI", "WhatTheTea.LearnWinUI\WhatTheTea.LearnWinUI.csproj", "{70E96D1B-26F0-4313-A4AF-4758EFD311D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,24 @@ Global
 		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.ActiveCfg = Release|x86
 		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.Build.0 = Release|x86
 		{76464931-D473-4F48-BF0E-A44773E89AED}.Release|x86.Deploy.0 = Release|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|ARM64.Build.0 = Debug|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x64.ActiveCfg = Debug|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x64.Build.0 = Debug|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x64.Deploy.0 = Debug|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x86.ActiveCfg = Debug|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x86.Build.0 = Debug|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Debug|x86.Deploy.0 = Debug|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|ARM64.ActiveCfg = Release|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|ARM64.Build.0 = Release|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|ARM64.Deploy.0 = Release|ARM64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x64.ActiveCfg = Release|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x64.Build.0 = Release|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x64.Deploy.0 = Release|x64
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x86.ActiveCfg = Release|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x86.Build.0 = Release|x86
+		{70E96D1B-26F0-4313-A4AF-4758EFD311D0}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

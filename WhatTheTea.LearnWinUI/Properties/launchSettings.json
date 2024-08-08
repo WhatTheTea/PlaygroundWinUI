@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WhatTheTea.LearnWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WhatTheTea.LearnWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
