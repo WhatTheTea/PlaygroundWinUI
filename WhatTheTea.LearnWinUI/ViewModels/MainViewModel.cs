@@ -7,9 +7,9 @@ using WhatTheTea.LearnWinUI.Models;
 
 namespace WhatTheTea.LearnWinUI.ViewModels
 {
-    internal partial class MainViewModel(IBookService bookService) : ObservableObject
+    public partial class MainViewModel(IBookService bookService) : ObservableObject
     {
-        public ObservableCollection<Book> books = [..bookService.GetBooks()];
+        public ObservableCollection<Book> Books = [..bookService.GetBooks()];
 
         [ObservableProperty]
         private Book? selectedBook;

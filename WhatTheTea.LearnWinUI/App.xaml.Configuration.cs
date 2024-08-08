@@ -1,12 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using WhatTheTea.LearnWinUI.Contracts;
+using WhatTheTea.LearnWinUI.Services;
 using WhatTheTea.LearnWinUI.ViewModels;
 
 namespace WhatTheTea.LearnWinUI
@@ -20,10 +16,20 @@ namespace WhatTheTea.LearnWinUI
             Container = Host.CreateDefaultBuilder()
                           .ConfigureServices(services =>
                           {
-                              services.AddSingleton<MainViewModel>();
+                              services.AddTransient<IBookService, DummyBookService>();
                           })
+                          .ConfigureViewModels()
                           .Build();
         }
 
+    }
+
+    public static class HostEx
+    {
+        public static IHostBuilder ConfigureViewModels(this IHostBuilder hostBuilder) => 
+            hostBuilder.ConfigureServices(services =>
+            {
+                services.AddSingleton<MainViewModel>();
+            });
     }
 }

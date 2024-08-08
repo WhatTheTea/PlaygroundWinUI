@@ -4,7 +4,7 @@ using WhatTheTea.LearnWinUI.Models;
 
 namespace WhatTheTea.LearnWinUI.Contracts;
 
-internal interface IBookService
+public interface IBookService
 {
     IEnumerable<Book> GetBooks();
 }
